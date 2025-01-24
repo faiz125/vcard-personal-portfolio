@@ -67,7 +67,7 @@
   --vegas-gold: hsla(140, 75%, 28%, 0.603);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(0, 65%, 42%);
 
   /**
    * typography
@@ -331,9 +331,17 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
+.avatar-box img{
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  .avatar-box img {
+    border-radius: 50%; /* Makes the border round */
+    border: 2px solid #000; /* Optional: Adds a black border */
+    width: 200px; /* Ensures the size remains consistent */
+    height: 200px; /* Ensures the aspect ratio is square */
+    object-fit: cover; /* Ensures the image scales properly inside the round border */
+  }
+  
 }
 
 .info-content .name {
@@ -540,9 +548,18 @@ main {
   z-index: -1;
 }
 
-.service-icon-box { margin-bottom: 10px; }
+.service-icon-box {   
+margin-bottom: 10px;
+fill: hsl(217, 90%, 46%);
+  background-color: hsl(176, 72%, 48%); /* Change to your desired background color */
+  padding: 10px; /* Adds spacing around the icon */
+  border-radius: 50%; /* Makes it circular */
+}
 
-.service-icon-box img { margin: auto; }
+.service-icon-box img { margin: auto; 
+    filter: invert(6%) sepia(92%) saturate(7490%) hue-rotate(201deg) brightness(96%) contrast(50%);
+  
+  }
 
 .service-content-box { text-align: center; }
 
